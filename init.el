@@ -1,8 +1,10 @@
+;; -*- lexical-binding: t; -*-
+(set-default-toplevel-value 'lexical-binding t)
 ;;charset
 (set-charset-priority 'unicode)
 (prefer-coding-system 'utf-8-unix)
 
-(setq native-comp-deferred-compilation t
+(setq native-comp-jit-compilation t
       native-comp-async-report-warnings-errors nil)
 
 (require 'package)
@@ -17,6 +19,7 @@
 	       (internal-border-width . 5)))
 	    ;; (set-frame-parameter nil 'alpha-background 80)
 	    (global-visual-line-mode t)
+	    (global-hl-line-mode t)
 	    ))
 
 (use-package  benchmark-init
@@ -26,7 +29,6 @@
 
 (add-hook 'after-init-hook 'benchmark-init/deactivate)
 
-;; (load-theme 'oxocarbon t)
 (use-package use-package-core
   :custom
   ;; (use-package-verbose t

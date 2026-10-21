@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+(set-default-toplevel-value 'lexical-binding t)
 ;; Custom stuff
 (setq default-frame-alist '(
                             (background-color . "#211F2F")))
@@ -6,7 +8,6 @@
 (load-file custom-file)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/ui/pinerose-emacs/")
-0;(load-theme 'everforest-hard-dark t)
 (setq gc-cons-threshold 63000000
       gc-cons-percentage 0.6)
 

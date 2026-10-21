@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (with-eval-after-load "ispell"
   ;; Configure `LANG`, otherwise ispell.el cannot find a 'default
   ;; dictionary' even though multiple dictionaries will be configured

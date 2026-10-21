@@ -55,18 +55,7 @@
   (recentf-load-list)
 
 
-  ;; (setq n 1)
-  ;; (let ((recent-files (seq-take recentf-list 10)))
-  ;;   (dolist (file recent-files)
-  ;;     (insert (all-the-icons-icon-for-file file) " ")
-  ;;     (insert-button (shorten-string (file-name-nondirectory file) 6 5)
-  ;; 		     'action (lambda (button) (find-file file))
-  ;; 		     'face 'dashboard-items-face
-  ;; 		     'help-echo file)
-  ;;     (if (> n 1) (progn (insert "\n") (setq n 1)) (progn (setq n (+ n 1)) (insert "\t")))
-  ;;     )
-  ;;   )
-  ;; )
+
   (setq n 1)
 (let* ((recent-files (seq-take recentf-list 10))
        (max-len (apply #'max (mapcar (lambda (f) (length (file-name-nondirectory f))) recent-files))))
@@ -88,14 +77,14 @@
   "Get a random fortune message from the specified FORTUNE-FILE."
   (interactive "Specify a fortune file: ")
   (with-temp-buffer
-    (call-process "fortune" nil t nil fortune-file)
+    (call-process "fortune" nil t nil "-a" fortune-file)
     (buffer-string)))
 
 (setq dashboard-footer-messages (list (random-fortune "/usr/share/fortune/linux")))
 
-(setq dashboard-footer-icon (all-the-icons-faicon "linux"
-                                                   :height 1.1
-                                                   :v-adjust -0.05))
+;; (setq dashboard-footer-icon (all-the-icons-faicon "linux"
+;;                                                    :height 1.1
+;;                                                    :v-adjust -0.05))
 
 (add-to-list 'dashboard-item-generators '(custom . dashboard-insert-custom))
 (add-to-list 'dashboard-item-generators '(time . dashboard-insert-time))

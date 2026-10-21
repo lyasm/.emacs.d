@@ -1,4 +1,4 @@
-;; (use-package helm
+;; (use-package helm  -*- lexical-binding: t; -*-
 ;;   :ensure t
 ;;   :defer t
 ;;   :init
