@@ -10,6 +10,7 @@
 (setq display-line-numbers-offset 0)
 
 (use-package lsp-mode
+  :ensure t
   :hook (
 	 (prog-mode .  (lambda ()
 			 (unless (eq major-mode 'emacs-lisp-mode)

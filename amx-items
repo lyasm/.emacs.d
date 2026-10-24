@@ -1,16 +1,28 @@
 
 ;; ----- amx-history -----
 (
- cd
- 5x5
- amx
- arp
- dbx
- dig
- erc
+ package-install
+ package-delete
+ load-theme
+ list-packages
+ package-refresh-contents
+ package-initialize
+ lsp-mode
 )
 
 ;; ----- amx-data -----
 (
- 
+ (package-install . 24)
+ (load-theme . 16)
+ (package-delete . 6)
+ (package-list-packages . 1)
+ (amx . 2)
+ (describe-package . 4)
+ (locate-library . 3)
+ (package-initialize . 2)
+ (dired-async-mode . 1)
+ (describe-variable . 2)
+ (lsp-mode . 1)
+ (package-refresh-contents . 1)
+ (list-packages . 1)
 )
