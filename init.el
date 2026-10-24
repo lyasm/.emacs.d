@@ -299,6 +299,9 @@
 					 (revert-buffer-function " %b"
 					 			 ("%b - Dir:  " default-directory)))))))
 
+(use-package async
+  :ensure t)
+
 (autoload 'dired-async-mode "dired-async.el" nil t)
 (dired-async-mode 1)
 

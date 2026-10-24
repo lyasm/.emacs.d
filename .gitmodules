@@ -1,0 +1,3 @@
+[submodule "ui/pinerose-emacs"]
+	path = ui/pinerose-emacs
+	url = https://github.com/lyasm/pinerose-emacs.git

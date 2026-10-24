@@ -1,0 +1,14 @@
+*
+!.gitignore
+!custom-file.el
+!org
+!org/*
+!packages
+!packages/*
+!prog
+!prog/*
+!ui
+!ui/*
+!ui/*/*
+!early-init.el
+!init.el
