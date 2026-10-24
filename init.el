@@ -9,12 +9,12 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;; (package-initialize)
+(package-initialize)
 
 (add-hook 'emacs-startup-hook
 	  (lambda ()
 	    (load-theme 'rose-pine t)
-	    (modify-all-frames-parameters
+	    (modify-all-frames-parametersxbm
 	     '((right-divider-width . 5)
 	       (internal-border-width . 5)))
 	    ;; (set-frame-parameter nil 'alpha-background 80)
@@ -283,7 +283,7 @@
 
 (use-package flycheck
   :ensure t
-  :defer t
+;  :defer t
   :diminish
   :config
   (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
@@ -298,6 +298,8 @@
 					 dired-directory
 					 (revert-buffer-function " %b"
 					 			 ("%b - Dir:  " default-directory)))))))
+(use-package async
+  :ensure t)
 
 (use-package async
   :ensure t)

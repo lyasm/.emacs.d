@@ -30,7 +30,7 @@
 (setq dashboard-banner-logo-title "Emacs: Turning text editing into an extreme sport since 1976")
 ;; Set the title
 ;; Set the banner
-(setq dashboard-startup-banner "/home/paul/Images/resized/emacs-glass.png")
+(setq dashboard-startup-banner "~/Images/resized/emacs-glass.png")
 
 ;; Content is not centered by default. To center, set
 (setq dashboard-center-content t)
