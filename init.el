@@ -317,5 +317,7 @@
 
 (keymap-global-set "C-c ;" 'comment-or-uncomment-region)
 
+
+(set-face-attribute 'default nil :font "SpaceMono Nerd Font" :height 110)
 (load-file "~/.emacs.d/ui/dashboard.el")
 (load-file "~/.emacs.d/ui/doomline.el")
